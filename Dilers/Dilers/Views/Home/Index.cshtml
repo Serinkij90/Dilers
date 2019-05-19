@@ -1,0 +1,23 @@
+﻿@model List<Dilers.Models.Diler>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <table>
+        <tr>
+            <td>Id</td>
+            <td>Name</td>
+            <td>Address</td>
+        </tr>
+        @foreach (var d in Model)
+        {
+            <tr>
+                <td>@d.Id</td>
+                <td>@d.Name</td>
+                <td>@d.Address</td>
+                <td><a asp-controller="Home" asp-action="Delete" asp-route-id="@d.Id">удалить</a></td>
+            </tr>
+        }
+    </table>
+</div>

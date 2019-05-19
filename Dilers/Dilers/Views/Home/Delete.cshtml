@@ -1,0 +1,14 @@
+﻿@model Dilers.Models.Diler
+@{
+    ViewData["Title"] = "Delete";
+}
+
+Вы действительно хотите удалить?
+@Model.Id
+@Model.Name
+@Model.Address
+<form asp-controller="Home" asp-action="DeleteConfirmed" asp-route-id="@Model.Id">
+    <button type="submit">
+        удалить
+    </button>
+</form>
