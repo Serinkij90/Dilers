@@ -3,21 +3,23 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <table>
-        <tr>
-            <td>Id</td>
-            <td>Name</td>
-            <td>Address</td>
-        </tr>
-        @foreach (var d in Model)
-        {
+    <div class="text-center">
+        <a asp-controller="Home" asp-action="Create" >Добавить дилера</a>
+        <table>
             <tr>
-                <td>@d.Id</td>
-                <td>@d.Name</td>
-                <td>@d.Address</td>
-                <td><a asp-controller="Home" asp-action="Delete" asp-route-id="@d.Id">удалить</a></td>
+                <td>Id</td>
+                <td>Name</td>
+                <td>Address</td>
             </tr>
-        }
-    </table>
-</div>
+            @foreach (var d in Model)
+            {
+        <tr>
+            <td>@d.Id</td>
+            <td>@d.Name</td>
+            <td>@d.Address</td>
+            <td><a asp-controller="Home" asp-action="Delete" asp-route-id="@d.Id">удалить</a></td>
+            <td><a asp-controller="Home" asp-action="Edit" asp-route-id="@d.Id">изменить</a></td>
+        </tr>
+            }
+        </table>
+    </div>

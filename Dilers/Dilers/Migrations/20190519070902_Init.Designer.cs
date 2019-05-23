@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Dilers.Migrations
 {
-    [DbContext(typeof(DilersContext))]
+    [DbContext(typeof(DilerContext))]
     [Migration("20190519070902_Init")]
     partial class Init
     {

@@ -11,9 +11,9 @@ namespace Dilers.Controllers
 {
     public class HomeController : Controller
     {
-        private DilersContext _context;
+        private DilerContext _context;
 
-        public HomeController(DilersContext context)
+        public HomeController(DilerContext context)
         {
             _context = context;
 
@@ -28,9 +28,25 @@ namespace Dilers.Controllers
         {
             return View();
         }
-        public IActionResult Edit()
+        [HttpPost]
+        public IActionResult Create(Diler model)
         {
-            return View();
+            _context.Dilers.Add(model);
+            _context.SaveChanges();
+            return RedirectToAction("Index");
+        }
+        public IActionResult Edit(int id)
+        {
+            var diler = _context.Dilers.FirstOrDefault(x => x.Id == id);
+            if (diler == null) return NotFound();
+            return View(diler);
+        }
+        [HttpPost]
+        public IActionResult Edit(Diler model)
+        {
+            _context.Dilers.Update(model);
+            _context.SaveChanges();
+            return RedirectToAction("Index");
         }
         public IActionResult Delete(int id)
         {

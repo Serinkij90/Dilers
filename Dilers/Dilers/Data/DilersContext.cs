@@ -7,10 +7,10 @@ using System.Threading.Tasks;
 
 namespace Dilers.Data
 {
-    public class DilersContext : DbContext
+    public class DilerContext : DbContext
     {
         public DbSet<Diler> Dilers { get; set; }
-        public DilersContext(DbContextOptions<DilersContext> options) : base(options)
+        public DilerContext(DbContextOptions<DilerContext> options) : base(options)
         {
 
         }

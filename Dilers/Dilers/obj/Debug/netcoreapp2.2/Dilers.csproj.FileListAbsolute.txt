@@ -29,3 +29,5 @@ C:\Users\Сергей\source\repos\Dilers\Dilers\obj\Debug\netcoreapp2.2\Dilers.
 C:\Users\Сергей\source\repos\Dilers\Dilers\obj\Debug\netcoreapp2.2\Dilers.pdb
 C:\Users\Сергей\source\repos\Dilers\Dilers\obj\Debug\netcoreapp2.2\Dilers.csproj.CopyComplete
 C:\Users\Сергей\source\repos\Dilers\Dilers\obj\Debug\netcoreapp2.2\Razor\Views\Home\Delete.g.cshtml.cs
+C:\Users\Сергей\source\repos\Dilers\Dilers\obj\Debug\netcoreapp2.2\Razor\Views\Home\Create.g.cshtml.cs
+C:\Users\Сергей\source\repos\Dilers\Dilers\obj\Debug\netcoreapp2.2\Razor\Views\Home\Edit.g.cshtml.cs

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Dilers.Data;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -7,9 +8,10 @@ using System.Threading.Tasks;
 
 namespace Dilers.Models
 {
+
     public class Diler
     {
-        
+
         public string Name { get; set; }
         public string Address { get; set; }
 

@@ -22,7 +22,7 @@ namespace Dilers
         public void ConfigureServices(IServiceCollection services)
         {
             string connection = Configuration.GetConnectionString("DefaultConnection");
-            services.AddDbContext<DilersContext>(options => options.UseNpgsql(connection));
+            services.AddDbContext<DilerContext>(options => options.UseNpgsql(connection));
             services.Configure<CookiePolicyOptions>(options =>
             {
                 // This lambda determines whether user consent for non-essential cookies is needed for a given request.
